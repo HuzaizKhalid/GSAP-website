@@ -1,14 +1,18 @@
 import React from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger, TextPlugin } from 'gsap/all'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin)
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello World GSAP</h1>
-    </div>
+    <main>
+      <Navbar/>
+      <Hero/>
+      <div className='h-[100vh]'></div>
+    </main>
   )
 }
 
