@@ -4,13 +4,13 @@ import { SplitText } from "gsap/all";
 import React, { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 
-const Hero = () => {
+const Home = () => {
   const videoRef = useRef();
 
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   useGSAP(() => {
-    const heroSplit = new SplitText(".title", {
+    const homeSplit = new SplitText(".title", {
       type: "chars, words",
     });
 
@@ -19,9 +19,9 @@ const Hero = () => {
     });
 
     // Apply text-gradient class once before animating
-    heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
+    homeSplit.chars.forEach((char) => char.classList.add("text-gradient"));
 
-    gsap.from(heroSplit.chars, {
+    gsap.from(homeSplit.chars, {
       yPercent: 100,
       duration: 1.8,
       ease: "expo.out",
@@ -40,7 +40,7 @@ const Hero = () => {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: "#hero",
+          trigger: "#home",
           start: "top top",
           end: "bottom top",
           scrub: true,
@@ -72,7 +72,7 @@ const Hero = () => {
 
   return (
     <>
-      <section id="hero" className="noisy">
+      <section id="home" className="noisy">
         <h1 className="title">MOJITO</h1>
 
         <img
@@ -122,4 +122,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;
