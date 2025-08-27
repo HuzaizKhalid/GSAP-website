@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Cocktails from './components/Cocktails'
 import About from './components/About'
 import Art from './components/Art'
+import Menu from './components/Menu'
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin)
 
@@ -16,8 +17,8 @@ const App = () => {
       <Home/>
       <Cocktails/>
       <About/>
-     
       <Art/>
+      <Menu/>
     </main>
   )
 }
